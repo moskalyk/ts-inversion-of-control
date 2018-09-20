@@ -12,7 +12,13 @@ class Container {
 			this.services[name] = instance;
 	}
 
-	public resolve(name : string) : any{
+	public resolve(name : string) : any {
+		const service: Object = this.services[name];
+
+		// If the instance is contained within the object
+		if(service instanceof Object)
+
+
 		return this.services[name];
 	}
 }

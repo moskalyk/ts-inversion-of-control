@@ -1,5 +1,4 @@
 import * as express from 'express';
-import createContainer from '../framework/createContainer';
 import Gamer from '../models/Gamer';
 
 const peerList = (req, res, next) => {
@@ -27,19 +26,15 @@ const addPeer = (req, res, next) => {
 	res.send(list).status(200);
 }
 
+//TODO: Abstract this to the index Controller
 export default () => {
 	
 	const router = express.Router();
 
-	// TODO: Apply Decorator to inject container into requests.
-
-	// @Container
 	router.get('/peers', peerList);
 
-	// @Container
 	router.get('/getMatch', getMatch);
 
-	// @Container
 	router.get('/addPeer/:name', addPeer);
 
 	return router;

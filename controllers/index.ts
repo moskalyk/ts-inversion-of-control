@@ -14,7 +14,6 @@ export default () => {
 	
 	const router = express.Router();
 
-	// @Container
 	router.get('/', index);
 
 	return router;
