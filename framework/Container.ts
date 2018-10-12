@@ -15,9 +15,8 @@ class Container {
 	public resolve(name : string) : any {
 		const service: Object = this.services[name];
 
-		// If the instance is contained within the object
-		if(service instanceof Object)
-
+		// TODO: If the instance is contained within the object
+		// if(service instanceof Object)
 
 		return this.services[name];
 	}
