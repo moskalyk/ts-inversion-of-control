@@ -17,8 +17,8 @@ export default class Gamer implements IPeer {
 		return this.name;
 	}
 
-	// Extends the base of IPeer
-	addWin(): void {
+	// add static method to Gamer model
+	Gamer.prototype.addWin = function(): void {
 		this.wins++;
 	}
 }
